@@ -1,6 +1,7 @@
 
 import { useProductByCategory } from "@/services/quires";
 import { Metadata } from "next";
+import CategoryItems from "./_components/CategoryItems";
 
 
 export const metadata: Metadata = {
@@ -9,11 +10,9 @@ export const metadata: Metadata = {
 };
 
 const CategoryPage = ({ params }: { params: { category: string } }) => {
-  const { data } = useProductByCategory(params.category);
+ 
 
-  console.log(data, "id");
-
-  return <div>categry id</div>;
+  return <CategoryItems category={params.category}/>;
 };
 
 export default CategoryPage;

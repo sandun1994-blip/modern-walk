@@ -1,29 +1,37 @@
-import { CATEGORY, colorMap } from "@/config";
-import Link from "next/link";
+'use client'
+import { getColor } from "@/utils/utils";
+import { useRouter } from "next/navigation";
+
 
 type Props = {
   category: string;
 };
 
 function CategoryCard({ category }: Props) {
-  const color = colorMap[category as CATEGORY];
+
+
+  const router = useRouter()
+
+  const encodedCategory = encodeURIComponent(category);
+const handleClick =()=>{
+  router.push(`categories/${encodedCategory}`, { scroll: false })
+}
+
   return (
-    <Link
-      href={`/category/${category}-clothing`}
-     
-    >
+   
       <div
         className={`relative w-[47%] h-[250px] flex justify-center items-center p-8 rounded-3xl
-         shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-lg xl:w-[35%] md:h-[400px]`}
-         style={{ backgroundColor: color }}
+         shadow-xl hover:shadow-lg xl:w-[35%] md:h-[400px] hover:cursor-pointer hover:scale-105`}
+        style={{ backgroundColor: getColor(category) }}
+        onClick={handleClick}
       >
         <div
-          className={`font-bold text-center text-white md:text-5xl sm:text-3xl`}
+          className={`font-bold text-center text-white md:text-5xl sm:text-3xl capitalize `}
         >
           {category}
         </div>
       </div>
-    </Link>
+   
   );
 }
 

@@ -4,10 +4,9 @@ import { z } from "zod";
 
 export const GET = async (request: NextRequest) => {
   try {
-   
-    
-    const categories = await axios.get((process.env.NEXT_PUBLIC_BASE_URL+ `/categories`) as string);
-    console.log(categories.data.length);
+    const categories = await axios.get(
+      (process.env.NEXT_PUBLIC_BASE_URL + `/categories`) as string
+    );
     return Response.json({ data: categories.data });
   } catch (error: any) {
     if (error instanceof z.ZodError) {

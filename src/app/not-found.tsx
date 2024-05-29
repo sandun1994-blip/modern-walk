@@ -4,8 +4,8 @@ const NotFound = async () => {
   return (
     <>
       <section className="section-sm text-center ">
-        <div className="container">
-          <div className="row justify-center">
+        <div className="container h-screen flex items-center justify-center">
+          <div className="row justify-center items-center">
             <div className="sm:col-10 md:col-8 lg:col-6">
               <span className="text-[8rem] block font-bold text-dark dark:text-darkmode-dark">
                 404
@@ -17,7 +17,7 @@ const NotFound = async () => {
                   name changed, or is temporarily unavailable.
                 </p>
               </div>
-              <Link href="/" className="btn btn-primary mt-8 mb-10">
+              <Link href="/" className="btn btn-primary mt-8 mb-10 text-blue-700 font-bold" >
                 Back to home
               </Link>
             </div>

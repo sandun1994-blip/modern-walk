@@ -1,11 +1,11 @@
-import { Product } from "@/types/types";
+import { JewelryItem, Product } from "@/types/types";
 import axios from "@/utils/axios";
 import { useQuery } from "@tanstack/react-query";
 
 export function useProducts() {
   return useQuery({
     queryKey: ["products"],
-    queryFn: async (): Promise<{data:Product[]}> => {
+    queryFn: async (): Promise<{ data: Product[] }> => {
       const { data } = await axios.get(``);
 
       return data;
@@ -13,14 +13,15 @@ export function useProducts() {
   });
 }
 
-export function useProductId(id: string) {
+export function useProductById(id: string) {
   return useQuery({
-    queryKey: ["product", { id }],
-    queryFn: async (): Promise<{data:Product}> => {
+    queryKey: ["product", id],
+    queryFn: async (): Promise<{ data: Product }> => {
       const { data } = await axios.get(`/${id}`);
 
       return data;
     },
+
     enabled: !!id,
   });
 }
@@ -28,7 +29,7 @@ export function useProductId(id: string) {
 export function useCategories() {
   return useQuery({
     queryKey: ["categories"],
-    queryFn: async (): Promise<{data:string[]}> => {
+    queryFn: async (): Promise<{ data: string[] }> => {
       const { data } = await axios.get(`/categories`);
 
       return data;
@@ -37,11 +38,9 @@ export function useCategories() {
 }
 
 export function useProductByCategory(category: string) {
-  console.log(category);
-  
   return useQuery({
     queryKey: ["category", { category }],
-    queryFn: async (): Promise<any> => {
+    queryFn: async (): Promise<{ data: JewelryItem[] }> => {
       const { data } = await axios.get(`/categories/${category}`);
 
       return data;
@@ -49,4 +48,3 @@ export function useProductByCategory(category: string) {
     enabled: !!category,
   });
 }
-

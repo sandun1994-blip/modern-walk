@@ -9,12 +9,11 @@ export const GET = async (
   
 
   try {
-    console.log('call');
     
     const category = await axios.get(
-      (process.env.NEXT_PUBLIC_BASE_URL + "/category/" + `${params.category}`) as string
+      (process.env.NEXT_PUBLIC_BASE_URL + "/category/" + `${decodeURIComponent(params.category)}`) as string
     );
-console.log(process.env.NEXT_PUBLIC_BASE_URL + "/category/" + `${params.category}`);
+
 
     return Response.json({ data: category.data });
   } catch (error: any) {
