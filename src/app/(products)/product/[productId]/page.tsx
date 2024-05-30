@@ -1,9 +1,4 @@
-import CardItem from "@/components/CardItem";
-import LoadingPage from "@/components/LoadingPage";
-import { Card } from "@/components/ui/card";
-import { useProductById } from "@/services/quires";
 
-import { Product } from "@/types/types";
 import { Metadata } from "next";
 import React from "react";
 import SingleProduct from "./_components/SingleProduct";

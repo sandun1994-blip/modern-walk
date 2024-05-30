@@ -1,5 +1,4 @@
 
-import { useProductByCategory } from "@/services/quires";
 import { Metadata } from "next";
 import CategoryItems from "./_components/CategoryItems";
 

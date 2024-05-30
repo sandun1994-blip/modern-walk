@@ -10,7 +10,7 @@ type Props = {
 const HomeLayout = ({ children }: Props) => {
   
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <NavBar brand={Config.uiMasterData.siteBrand}/>
       <main className="pt-24" >{children}</main>
     </div>
