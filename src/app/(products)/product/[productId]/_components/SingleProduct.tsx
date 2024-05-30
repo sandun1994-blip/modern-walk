@@ -28,7 +28,7 @@ const SingleProduct = ({ productId }: { productId: string }) => {
     <div className="flex justify-center items-center h-[90vh]">
       {" "}
       <Card
-        className="h-[80%] w-[50%] rounded-2xl shadow-xl flex flex-col justify-between
+        className="h-[80%] w-[75%] md:w-[50%] rounded-2xl shadow-xl flex flex-col justify-between
     hover:bg-gray-100 hover:scale-105 hover:cursor-pointer "
       >
         <CardHeader>
