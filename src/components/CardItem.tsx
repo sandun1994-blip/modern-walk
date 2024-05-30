@@ -47,7 +47,7 @@ const CardItem = ({ item, textCount }: Props) => {
         <span className="text-white font-bold text-2xl text-center md:text-3xl">
           Rs {item.price}
         </span>
-        <CardDescription className="text-black text-md md:text-md text-center font-serif">
+        <CardDescription className="text-black text-sm md:text-md text-center font-serif">
           {truncatedText(item.description, textCount * 3)}
         </CardDescription>
       </CardFooter>
