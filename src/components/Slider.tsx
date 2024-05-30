@@ -26,7 +26,7 @@ const Slider = ({ products }: { products: Product[] }) => {
 
   return (
     <Carousel
-      className="w-full max-w-xs  md:max-w-[85%] lg:max-w-[80%]"
+      className="w-full max-w-[70%]  md:max-w-[85%] lg:max-w-[80%]"
       opts={{
         align: "start",
         loop: true,
