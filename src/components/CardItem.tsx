@@ -18,7 +18,7 @@ type Props = { item: Product; textCount: number };
 const CardItem = ({ item, textCount }: Props) => {
   return (
     <Card
-      className="min-h-[400px] max-h-[600px] max-w-[400px] rounded-2xl shadow-xl flex flex-col justify-between
+      className="min-h-[600px] max-h-[600px] max-w-[400px] rounded-2xl shadow-xl flex flex-col justify-between
     hover:bg-gray-100 hover:cursor-pointer hover:scale-105"
     >
       <CardHeader>

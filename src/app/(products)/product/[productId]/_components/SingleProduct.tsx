@@ -25,7 +25,7 @@ const SingleProduct = ({ productId }: { productId: string }) => {
   }
 
   return (
-    <div className="flex justify-center items-center h-[90vh] pb-10">
+    <div className="flex justify-center items-center h-[90vh] pb-20">
       {" "}
       <Card
         className="h-[80%] w-[75%] md:w-[50%] rounded-2xl shadow-xl flex flex-col justify-between
