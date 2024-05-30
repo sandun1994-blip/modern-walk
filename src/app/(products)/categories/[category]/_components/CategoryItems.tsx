@@ -13,7 +13,7 @@ const CategoryItems = ({ category }: { category: string }) => {
   }
   return (
     <>
-     <h1 className="mt-7 ml-40 md:ml-[10%] text-start text-3xl md:text-4xl font-bold   text-gray-600 w-[80%] capitalize">{encodedCategory}</h1>
+     <h1 className="mt-7 ml-[10%]  text-start text-3xl md:text-4xl font-bold   text-gray-600 w-[80%] capitalize">{encodedCategory}</h1>
     <div className="w-[100%] flex mx-auto  flex-wrap justify-center items-center gap-10 py-10">
       {data?.data.map((item) => (
         <Link href={`/product/${item.id}`} key={item.id}>

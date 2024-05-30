@@ -26,7 +26,7 @@ const handleClick =()=>{
         onClick={handleClick}
       >
         <div
-          className={`font-bold text-center text-white md:text-5xl sm:text-3xl capitalize `}
+          className={`font-bold text-center text-white md:text-5xl text-3xl capitalize `}
         >
           {category}
         </div>

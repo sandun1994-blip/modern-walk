@@ -3,7 +3,7 @@ import Categories from "./_components/Categories";
 import Produts from "./_components/Produts";
 
 export const metadata: Metadata = {
-  title: "Home Page",
+  title: "Modern Walk",
   description: "Developed by SANDUN",
 };
 
