@@ -20,7 +20,7 @@ const handleClick =()=>{
   return (
    
       <div
-        className={`relative w-[47%] h-[250px] flex justify-center items-center p-8 rounded-3xl
+        className={`relative w-[70%] md:w-[47%] h-[250px] flex justify-center items-center p-8 rounded-3xl
          shadow-2xl hover:shadow-lg xl:w-[35%] md:h-[350px] hover:cursor-pointer hover:scale-105`}
         style={{ backgroundColor: getColor(category) }}
         onClick={handleClick}
